@@ -53,8 +53,8 @@ use Atom\Components\SplitView;
 use Atom\Components\FormActions;
 use Atom\Components\Inline;
 use Atom\Components\Icon;
-use Atom\Modules\Icons\IconRegistry;
-use Atom\Modules\Icons\IconResolverInterface;
+use Atom\View\Icons\IconRegistry;
+use Atom\View\Icons\IconResolverInterface;
 use Atom\Components\InputGroup;
 use Atom\Components\Kbd;
 use Atom\Components\ListComponent;
@@ -87,7 +87,7 @@ use Atom\View\Component\ComponentInterface;
 use Atom\View\Component\ComponentRegistry;
 use Atom\View\Component\ComponentView;
 use Atom\View\Component\Fragment;
-use Atom\View\Component\InjectorComponentFactory;
+use Atom\Integration\View\InjectorComponentFactory;
 use Atom\View\Parser\ViewParser;
 use Atom\View\Render\ViewRenderer;
 use PHPUnit\Framework\TestCase;
@@ -108,7 +108,7 @@ final class ComponentViewTest extends TestCase
             '<link rel="stylesheet" href="/atom/components/resources/atom.css?v=12">',
             $html
         );
-        $this->assertStringContainsString('<script src="/atom/client/resources/atom.js?v=17"></script>', $html);
+        $this->assertStringContainsString('<script src="/atom/client/resources/atom.js?v=18"></script>', $html);
         $this->assertStringContainsString(
             '<script src="/atom/client/resources/morphdom.js?v=2.7.8"></script>',
             $html
